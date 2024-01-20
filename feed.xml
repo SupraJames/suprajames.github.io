@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-20T20:12:17+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">My Notes</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Changing Startup Logo on Audi A6</title><link href="http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Changing Startup Logo on Audi A6" /><published>2024-01-20T19:18:30+00:00</published><updated>2024-01-20T19:18:30+00:00</updated><id>http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/welcome-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/welcome-to-jekyll.html"><![CDATA[<p>OK, so this won’t give you any extra horsepower, but it looks cool. The MMI and Instruments module in the Audi A6 (and probably other models) contains start up screens for the different sub models, i.e. A6, S6 or RS6. The logo which appears at start up is dependent on the coding (configuration) of that car when it left the factory.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-01-20T21:24:31+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">My Notes</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Test page please ignore</title><link href="http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/test-copy.html" rel="alternate" type="text/html" title="Test page please ignore" /><published>2024-01-20T19:18:30+00:00</published><updated>2024-01-20T19:18:30+00:00</updated><id>http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/test%20copy</id><content type="html" xml:base="http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/test-copy.html"><![CDATA[<p>OK, so this won’t give you any extra horsepower, but it looks cool. The MMI and Instruments module in the Audi A6 (and probably other models) contains start up screens for the different sub models, i.e. A6, S6 or RS6. The logo which appears at start up is dependent on the coding (configuration) of that car when it left the factory.</p>
+
+<p>With VCDS you can change the coding to display the logo of your choice.</p>
+
+<h3 id="using-vcds-or-any-other-tool-to-change-your-coding-or-adaptation-values-is-dangerous-if-you-make-changes-without-full-understanding-you-can-break-your-car-dont-do-it">Using VCDS or any other tool to change your coding, or Adaptation values is <strong>DANGEROUS</strong>. If you make changes without full understanding, you can break your car. Don’t do it!</h3>
+
+<p>TL;DR if you already know how to use VCDS</p>
+
+<p>MMI Screen<br />
+Control Module 5F - Information Electr.<br />
+Long Coding, Byte 18<br /></p>
+
+<p>Dashboard Display<br />
+Control Module 17 - Instruments<br />
+Long Coding, Byte 9<br /></p>
+
+<h2 id="mmi-screen">MMI Screen</h2>
+
+<h2 id="dashboard">Dashboard</h2>
+
+<p>The following screenshots show the process to follow.</p>
+
+<p><img src="/assets/pic0.png" alt="Select Control Module" /></p>
+
+<p><img src="/assets/pic1.png" alt="Select Instruments Module" /></p>
+
+<p><img src="/assets/instruments.png" alt="Instruments" /></p>
+
+<p><img src="/assets/instr-lc.png" alt="Instruments Long Coding" /></p>
+
+<p>Now comes the fun part. Use the Long Coding Helper to navigate to Byte 9. The drop-down menu will change, and show you the available options. Select the one you like, and close the window:</p>
+
+<p><img src="/assets/insr-lch.png" alt="Instruments Long Coding" /></p>
+
+<p>The new coding will be displayed. It is a very good idea to take a screenshot at this point, or record the coding so that it can be set back to default in case of problems:</p>
+
+<p><img src="/assets/instr-newcoding.png" alt="Instruments Long Coding" /></p>
+
+<p>If you are happy, select Do It! and the new coding will be written to the module. Turn the ignition off and on again to see the new logo.</p>]]></content><author><name></name></author><category term="vcds" /><category term="audi" /><category term="a6c7" /><summary type="html"><![CDATA[OK, so this won’t give you any extra horsepower, but it looks cool. The MMI and Instruments module in the Audi A6 (and probably other models) contains start up screens for the different sub models, i.e. A6, S6 or RS6. The logo which appears at start up is dependent on the coding (configuration) of that car when it left the factory.]]></summary></entry><entry><title type="html">Changing Startup Logo on Audi A6</title><link href="http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Changing Startup Logo on Audi A6" /><published>2024-01-20T19:18:30+00:00</published><updated>2024-01-20T19:18:30+00:00</updated><id>http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/welcome-to-jekyll</id><content type="html" xml:base="http://0.0.0.0:4000/vcds/audi/a6c7/2024/01/20/welcome-to-jekyll.html"><![CDATA[<p>OK, so this won’t give you any extra horsepower, but it looks cool. The MMI and Instruments module in the Audi A6 (and probably other models) contains start up screens for the different sub models, i.e. A6, S6 or RS6. The logo which appears at start up is dependent on the coding (configuration) of that car when it left the factory.</p>
 
 <p>With VCDS you can change the coding to display the logo of your choice.</p>
 
