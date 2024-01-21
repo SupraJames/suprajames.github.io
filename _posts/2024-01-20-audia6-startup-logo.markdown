@@ -20,11 +20,11 @@ Dashboard Display<br>
 Control Module 17 - Instruments<br>
 Long Coding, Byte 9<br>
 
-![Dashboard](/assets/a6-startup-logo/dash.jpg)
-
-![MMI](/assets/a6-startup-logo/mmi.jpg)
+# Full instructions
 
 ## MMI Screen
+
+![MMI](/assets/a6-startup-logo/mmi.jpg)
 
 The following screenshots show the process to follow.
 
@@ -48,7 +48,9 @@ If you are happy, select Do It! and the new coding will be written to the module
 
 ## Dashboard
 
-The following screenshots show the process to follow.
+![Dashboard](/assets/a6-startup-logo/dash.jpg)
+
+The following screenshots show the process to follow. It's basically the same process as above, but we will be connecting to the Instruments control module, not the MMI one.
 
 ![Select Control Module](/assets/a6-startup-logo/pic0.png)
 
