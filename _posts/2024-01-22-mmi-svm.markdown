@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "SVM Fault on Audi A6 after software update"
+date:   2024-01-20 19:18:30 +0000
+categories: vcds audi a6c7
+---
+After updating my MMI from the factory code to the latest provided, I noticed a new fault appearing under control module 5F (MMI). 
+
+`B201A00 - Checking software version management`
+
+While this doesn't seem to affect anything, it's not very nice to have faults logged. Initially I tried to clear the fault, but it returned immediately.
+
+This appears to be a VAG feature called SVM (Software Version Management). The error can be cleared using VCDS or other tools by using the Adaptation feature.
+
+### Using VCDS or any other tool to change your coding, or Adaptation values is **DANGEROUS**. If you make changes without full understanding, you can break your car. Don't do it!
+
+High level steps
+
+1. Read 4 digit number from control module 
+2. Decrypt that value using the calculator below
+3. Write the new value back to the same channel
+
+The error will then be cleared. Note that if you re-read the Adaptation value, it won't have changed, this is normal.
+
+The adaptation channel to use is called "Confirmation of installation change", pictured here:
+
+## Decryption tool
+
+{% include decrypt.html %}
+
+For the technically inclined, the calculator simply performs a bitwise XOR of the input against C9D2 which is the static key Audi use for this purpose.

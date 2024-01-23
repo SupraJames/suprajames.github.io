@@ -1,0 +1,58 @@
+<html lang="en-US">
+
+<body>
+    <div class="form">
+        <label for="entry">Value to Decrypt: </label>
+        <input type="text" required id="entry" class="entry">
+        <input type="submit" value="Decrypt!" class="submit">
+    </div>
+
+    <div class="resultParas">
+        <h2>
+            <p class="result"></p>
+        </h2>
+    </div>
+
+    <script>
+
+        const result = document.querySelector('.result');
+        const submit = document.querySelector('.submit');
+        const entryField = document.querySelector('.entry');
+
+        function hexXOR(hexString1, hexString2) {
+
+            // Convert hex strings to integers
+            const num1 = parseInt(hexString1, 16);
+            const num2 = parseInt(hexString2, 16);
+
+            // Perform bitwise XOR
+            const result = num1 ^ num2;
+
+            // Convert result back to hex and pad to 4 digits
+            const resultHex = result.toString(16).padStart(4, '0');
+
+            return resultHex.toUpperCase();
+        }
+
+        function isHex(num) {
+            return Boolean(num.match(/^[0-9a-f]+$/i))
+        }
+
+        function decryptKey() {
+
+            if (entryField.value.length === 4 && isHex(entryField.value)) {
+                // C9D2 (Decimal 51666 is the Magic Key)
+                result.textContent = "Decrypted Value: " + hexXOR(entryField.value, "C9D2");
+            } else {
+                result.textContent = "ERROR - Please enter 4 Hex (0-9, A-F) characters";
+            }
+
+            entryField.focus();
+        }
+
+        submit.addEventListener('click', decryptKey);
+
+    </script>
+</body>
+
+</html>
