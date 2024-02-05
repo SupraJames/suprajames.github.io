@@ -1,0 +1,43 @@
+---
+layout: post
+title:  "Antenna for Telephone Mount - Electrical Failure"
+date:   2024-02-05 19:18:30 +0000
+categories: vcds audi a6c7
+---
+I picked up my car a few weeks ago, and foruntately it was mostly clear of faults in VCDS / OBDeleven. However there was one persistent fault in the MMI (Module 4F) relating to the GSM antenna system:
+
+```
+3086 - Antenna for Telephone Mount 
+          B1564 01 [009] - Electrical Failure
+          Confirmed - Tested Since Memory Clear
+             Freeze Frame:
+                    Fault Status: 00000001
+                    Fault Priority: 4
+                    Fault Frequency: 1
+                    Reset counter: 76
+                    Mileage: 132416 km
+                    Date: 2023.12.22
+                    Time: 12:14:34
+
+                    Voltage terminal 30: 14.9 V
+                    Status of telephone-Antenna diagnostic: OK
+                    Status of telephone-Telephone baseplate diagnostic: not connected
+                    Status of telephone-Handset in handset holder (cradle): selected
+                    Status of telephone-Handset holder (cradle): connected
+```
+
+The car is a 2015 Audi A6 C7 with Tech Pack, which apparently included a function called Audi Phone Box. This gives you a small rubber mat under the armrest, and it's linked to a signal booster which re-broadcasts the GSM/4G signal to an antenna in the boot of the car. Here's a picture of the rubber mat:
+
+![Phone Box Mat](/assets/phonebox.jpg)
+
+I initially thought that this was for Wireless Charging, but my car does't have that - some do, and there is a slightly different logo on them.
+
+Unfortunately, Audi somehow didn't realise that GSM repeaters / boosters are completely illegal in the UK so any cars with this option installed needed to have it removed, either prior to import, or during a recall campaign. The booster module electronics was removed, but of course the MMI still expected to see it, hence the error.
+
+### Using VCDS or any other tool to change your coding, or Adaptation values is **DANGEROUS**. If you make changes without full understanding, you can break your car. Don't do it!
+
+To supress this error permanently, the MMI module need to be coded to remove the missing module. It's in Byte 15 of module 4F:
+
+![4F coding](/assets/4fbyte15.png)
+
+Unselecting Bit 1 (Telephone Antenna Baseplate installed) and saving the new coding cleared the fault, and it has not returned so far.
