@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Antenna for Telephone Mount - Electrical Failure"
-date:   2024-02-05 19:18:30 +0000
+date:   2024-02-05 12:10:30 +0000
 categories: vcds audi a6c7
 ---
 I picked up my car a few weeks ago, and foruntately it was mostly clear of faults in VCDS / OBDeleven. However there was one persistent fault in the MMI (Module 4F) relating to the GSM antenna system:
